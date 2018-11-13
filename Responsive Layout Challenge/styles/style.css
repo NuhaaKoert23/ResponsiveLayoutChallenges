@@ -1,0 +1,43 @@
+/* Desktop View */
+.container{
+    display:grid;
+    grid-gap:20px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.container>div {
+    display:grid;
+    height:150px;
+    align-items:center;
+    justify-content: center;
+    background-color: orange;
+    border-radius: 10px;
+}
+
+.item1{
+grid-column: 1/4;
+}
+
+
+.item3{
+    grid-column-start:2;
+    grid-column-end:4;
+}
+
+.item7{
+    grid-column:1/4;
+}
+
+/* Tablet View */
+@media(max-width: 780px) {
+    .container>div {
+        background-color: blue;
+    }
+}
+
+/* Mobile view */
+@media(max-width: 400px) {
+    .container>div {
+        background-color: red;
+    }
+}
